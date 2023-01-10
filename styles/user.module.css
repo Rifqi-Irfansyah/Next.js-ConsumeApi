@@ -1,0 +1,46 @@
+.card{
+    box-shadow: 3px 3px 11px 3px rgb(0 0 0 / 15%);
+    text-align: center;
+    padding: 16px;
+    background-color: white;
+    box-shadow: 6px 3px 13px 1px rgb (0 0 0 / 35%);
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    margin-left: 15%;
+    margin-right: 15%;
+    align-items: center;
+    display: inline-flexbox;
+}
+
+.image{
+    object-fit:none; /* Do not scale the image */
+    object-position: center; /* Center the image within the element */
+    height: 250px;
+    width: 450px;
+}
+
+.head{
+    margin-top: 12px;
+    text-align: center;
+    align-content: center;
+}
+
+.judulvacation{
+    font-family: verdana;
+    font-style: bold;
+    text-align: left;
+    font-size: 20px;
+}
+
+.description{
+    font-family: verdana;
+    padding-left: 20px;
+    vertical-align: top;
+    text-align: justify;
+    white-space: pre-wrap;
+}
+
+.none{
+    list-style: none;
+}
