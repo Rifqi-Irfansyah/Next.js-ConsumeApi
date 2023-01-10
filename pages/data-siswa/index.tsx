@@ -1,38 +1,35 @@
+import Layout from "../Layout";
 import styles from '../../styles/user.module.css';
-import Layout from '../Layout';
 
-export default function Users({dataUsers}: any){
-    return(
-        <div>
-            <Layout title='Props'>
-                {dataUsers.map((user:any) => (
+export default function Produk(props:any) {
+    const {dataUser} = props;
+    
+  return (
+    <div>
+        <Layout title='Props'>
+                {dataUser.data.map((user:any) => (
                     <div className={styles.card} key={styles.id}>
                     <img src={`http://localhost:8055/assets/${user.image}`} className={styles.image}/>
                     <p>{user.name}</p>
                     </div>  
                 ))}
             </Layout>
-        </div>
-            
-    )
-}
+    </div>
+  )
+  }
+  
+  export async function getServerSideProps() {
+    
+    const res = await fetch('http://127.0.0.1:8055/items/cars');
+    const dataUser = await res.json();
 
-export async function getServerSideProps() {
-    try {
-        // const res = await fetch ('https://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline')
-      const res = await fetch('http://localhost:8055/items/cars');
-      const dataUsers = await res.json();
-      return {
+    console.log(dataUser
+      );
+  
+    return {
         props: {
-          dataUsers,
-        },
-      };
-    } catch (error) {
-      console.error(error);
-      return {
-        props: {
-          dataUsers: [],
-        },
-      };
+            dataUser,
+        }
     }
+    
   }
