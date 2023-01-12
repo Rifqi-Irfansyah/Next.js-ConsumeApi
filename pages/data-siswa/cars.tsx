@@ -21,22 +21,22 @@ export default function cars() {
 
     return (
         <Layout title='Cars'>
-        <div>
-        <ul className={styles.none}>
-            {siswa.map((user:any) => (
-                <li key={user.id}>
-                    <table className={styles.card}>
-                        <tbody>
-                            <tr>
-                                <td><img src={`http://localhost:8055/assets/${user.image}`} className={styles.image}/></td>
-                                <td className={styles.description}>{user.description}</td>
-                            </tr>
-                        </tbody>
-                    </table><br></br> 
-                </li>
-            ))}
-        </ul>
-        </div>
+            <div>
+            <ul className={styles.none}>
+                {siswa.map((user:any) => (
+                    <li key={user.id}>
+                        <table className={styles.card}>
+                            <tbody>
+                                <tr>
+                                    <td><img src={`http://localhost:8055/assets/${user.image}`} className={styles.image}/></td>
+                                    <td className={styles.description}>{user.description}</td>
+                                </tr>
+                            </tbody>
+                        </table><br></br> 
+                    </li>
+                ))}
+            </ul>
+            </div>
         </Layout>
     );
     

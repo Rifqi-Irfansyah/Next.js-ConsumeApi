@@ -12,8 +12,8 @@ export default function Header(props: LayoutProps){
             <h3 className={styles.title_page}>{pageTitle}</h3>
             <ul className={styles.list}>
                 <li className={styles.item}><Link className={styles.link} href="/data-siswa/vacation">Vacation</Link></li>
-                {/* <li className={styles.item}><Link className={styles.link} href="/data-siswa">Make up</Link></li> */}
                 <li className={styles.item}><Link className={styles.link} href="/data-siswa/cars">Cars</Link></li>
+                <li className={styles.item}><Link className={styles.link} href="/data-siswa/blog">Blog</Link></li>
             </ul>
         </header>
     )
